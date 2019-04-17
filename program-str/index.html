@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <script>
+      // Conditional execution
+      let theNumber = Number(prompt("Pick a number"));
+      if (!Number.isNaN(theNumber)) {
+        console.log("Your number is a square root of " + theNumber * theNumber);
+      } else {
+        console.log("Why dont you give me a number?");
+      }
+
+      // while and do loops
+      let number = 0;
+      while (number <= 12) {
+        console.log(number);
+        number += 2;
+      }
+
+      let result = 1;
+      let counter = 0;
+
+      while (counter < 10) {
+        result = result * 2;
+        counter += 1;
+      }
+      console.log(result);
+
+      let yourName;
+      do {
+        yourName = prompt("who are you?");
+      } while (!yourName);
+
+      console.log(yourName);
+
+      // For Loop
+      let result1 = 1;
+      for (let counter = 0; counter < 10; counter++) {
+        result1 *= 2;
+      }
+      console.log(result1);
+
+      for (let current = 20; current < 80; current++) {
+        if (current % 7 == 0) {
+          console.log(current);
+          continue;
+        }
+      }
+
+      // Switch Case
+      switch (prompt("How is the weather today?")) {
+        case "rainy":
+          console.log("Dont forget to bring umbrella");
+          break;
+
+        case "sunny":
+          console.log("Wear light cloths");
+          break;
+
+        case "cloudy":
+          console.log("It may rain anytime");
+          break;
+
+        default:
+          console.log("Unpredictable");
+          break;
+      }
+
+      // Exercise
+
+      // Looping a triagnle
+      let x = "#";
+      for (let i = 1; i < 8; i++) {
+        console.log(x);
+        x += "#";
+      }
+
+      // Fizzbuzz
+      for (let i = 1; i <= 100; i++) {
+        if ((i % 3 == 0) & (i % 5 == 0)) {
+          console.log("FizzBuzz");
+        } else if (i % 3 == 0) {
+          console.log("Fizz");
+        } else if (i % 5 == 0) {
+          console.log("Buzz");
+        } else {
+          console.log(i);
+        }
+      }
+
+      // Chessboard
+      let board = "";
+      for (let i = 0; i < 8; i++) {
+        for (let j = 0; j < 8; j++) {
+          if ((i + j) % 2 == 0) {
+            board += " ";
+          } else {
+            board += "#";
+          }
+        }
+        board += "\n";
+      }
+      console.log(board);
+    </script>
+  </body>
+</html>
